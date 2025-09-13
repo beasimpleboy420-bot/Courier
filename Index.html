@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maruti Courier</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+  <img src="images/logo.png" alt="Logo">
+  <h1>MARUTI COURIER</h1>
+  <p>Fast • Reliable • Affordable – Delivering Smiles Everyday</p>
+</header>
+
+<div class="slideshow-container">
+  <img class="slides" src="images/slide1.jpg" alt="Slide1">
+  <img class="slides" src="images/slide2.jpg" alt="Slide2">
+  <img class="slides" src="images/slide3.jpg" alt="Slide3">
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<div class="dot-container">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<section class="tracking">
+  <h2>Track Your Parcel</h2>
+  <input type="text" id="trackId" placeholder="Enter Tracking ID">
+  <button onclick="trackParcel()">Track</button>
+  <p id="trackingResult"></p>
+</section>
+
+<section class="services">
+  <h2>Our Services</h2>
+  <ul>
+    <li>Express Parcel Delivery</li>
+    <li>Cash on Delivery</li>
+    <li>Same Day Shipping</li>
+    <li>Bulk & Business Shipping</li>
+  </ul>
+</section>
+
+<section class="booking">
+  <h2>Book Your Parcel</h2>
+  <form id="bookingForm">
+    <label>Pickup Location</label>
+    <input type="text" id="pickup" placeholder="City, Area" required>
+    <label>Delivery Location</label>
+    <input type="text" id="delivery" placeholder="City, Area" required>
+    <label>Parcel Weight (Kg)</label>
+    <input type="number" id="weight" min="1" required>
+    <label>Courier Type</label>
+    <select id="courierType">
+      <option value="standard">Standard</option>
+      <option value="express">Express</option>
+    </select>
+    <button type="button" onclick="calculatePrice()">Calculate Price</button>
+    <p class="price-output" id="priceOutput"></p>
+    <button type="button" id="payBtn" style="display:none;">Pay Now</button>
+    <button type="submit">Confirm Booking</button>
+  </form>
+</section>
+
+<section class="contact">
+  <h2>Contact Us</h2>
+  <p><strong>Office Address:</strong> 123, Main Street, Your City, India</p>
+  <p><strong>Phone:</strong> +91 6350309855</p>
+  <p><strong>Email:</strong> info@maruticourier.com</p>
+  <p><strong>Working Hours:</strong> Mon-Sat 9:00 AM - 6:00 PM</p>
+</section>
+
+<section class="about">
+  <img src="images/ceo.jpg" alt="CEO Photo">
+  <div class="about-text">
+    <h2>About Us</h2>
+    <p><strong>Raj Joshi</strong> – Founder & CEO</p>
+    <p>At Maruti Courier, we ensure every parcel carries emotions and trust. With years of experience, we ensure packages reach safely and on time.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="social-icons">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+  </div>
+  <p>&copy; 2025 Maruti Courier. All Rights Reserved.</p>
+</footer>
+
+<div class="floating-call">
+  <a href="tel:6350309855">📞</a>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
