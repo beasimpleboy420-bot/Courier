@@ -236,14 +236,14 @@ function calculatePrice(){
     let price=weight*base;
     priceOutput.innerHTML="💰 Estimated Price: ₹"+price;
 
-    // Show Pay Now button
+ // Show Pay Now button
     let payBtn=document.getElementById("payBtn");
     payBtn.style.display="block";
     payBtn.onclick=function(){
-      let upiID="yourupi@okaxis"; // <-- Replace with your UPI ID
+      let upiID="mail.rajjoshi-1@okaxis"; // ✅ Aapki UPI ID
       let name="MarutiCourier";
       let note="Parcel Payment";
-      let url=`upi://pay?pa=${mail.rajjoshi-1@okaxis}&pn=${name}&tn=${note}&am=${price}&cu=INR`;
+      let url=`upi://pay?pa=${upiID}&pn=${name}&tn=${note}&am=${price}&cu=INR`;
       window.location.href=url;
     }
   },1500);
